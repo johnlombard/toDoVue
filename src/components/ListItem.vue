@@ -1,8 +1,6 @@
 <template>
    <li @click="onItemSelect">
-       <div>
-           <!-- {{task}} -->
-       </div>
+        {{toDoTasks}}
     </li>
 </template>
 
@@ -10,6 +8,9 @@
 
 export default {
     name: 'ListItem',
+    props: {
+        toDoTasks: Array
+    },
     methods: {
         onItemSelect() {
             return alert("clicked!")

@@ -12,6 +12,9 @@ export default {
     components: {
         ListItem
     },
+    props: {
+        toDoTasks: Array
+    }
 
 }
 </script>

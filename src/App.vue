@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Form @termChange="onTermChange"></Form>
+    <Form @termChange="onTermChange" @addTask="addTask"></Form>
     <List></List>
-    {{tasks}}
+    <!-- {{toDoTasks}} -->
   </div>
 </template>
 
@@ -20,11 +20,18 @@ export default {
     Form
   },
   data() {
-    return {tasks: ["do yo shit"]}
+    return {
+      userEntry: '', 
+      toDoTasks: []}
   },
   methods: {
+    addTask(){
+      this.toDoTasks.push(this.userEntry)
+    },
+    
+
     onTermChange(task) {
-      this.tasks = task
+      this.userEntry = task
     }
   }
 };
