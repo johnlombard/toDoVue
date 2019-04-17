@@ -1,6 +1,10 @@
 <template>
     <ul>
-        <ListItem></ListItem>
+        <ListItem
+        v-for="toDoTask in toDoTasks"
+        :toDoTask="toDoTask"
+       
+        ></ListItem>
     </ul>
 </template>
 

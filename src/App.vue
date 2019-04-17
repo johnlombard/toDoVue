@@ -2,8 +2,7 @@
   <div id="app">
     <Header></Header>
     <Form @termChange="onTermChange" @addTask="addTask"></Form>
-    <List></List>
-    <!-- {{toDoTasks}} -->
+    <List :toDoTasks="toDoTasks"></List>
   </div>
 </template>
 
@@ -29,7 +28,6 @@ export default {
       this.toDoTasks.push(this.userEntry)
     },
     
-
     onTermChange(task) {
       this.userEntry = task
     }
