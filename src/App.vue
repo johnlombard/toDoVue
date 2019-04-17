@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Form ></Form>
+    <Form @termChange="onTermChange"></Form>
     <List></List>
+    {{tasks}}
   </div>
 </template>
 
@@ -17,6 +18,14 @@ export default {
     Header,
     List,
     Form
+  },
+  data() {
+    return {tasks: ["do yo shit"]}
+  },
+  methods: {
+    onTermChange(task) {
+      this.tasks = task
+    }
   }
 };
 </script>

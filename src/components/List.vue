@@ -1,12 +1,18 @@
 <template>
-    <div>
-        List
-    </div>
+    <ul>
+        <ListItem></ListItem>
+    </ul>
 </template>
 
 <script>
+import ListItem from './ListItem';
+
 export default {
-    name: 'List'
+    name: 'List',
+    components: {
+        ListItem
+    },
+
 }
 </script>
 

@@ -9,8 +9,8 @@
 export default {
     name: 'Form',
     methods: {
-        onInput: (event)=> {
-            this.$emit('termChange', event.target.value);
+        onInput(event) {
+            this.$emit('termChange', event.target.value)
         }
     }
 };
