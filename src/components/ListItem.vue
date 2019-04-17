@@ -12,7 +12,7 @@ export default {
     props:['toDoTask'],
     methods: {
         onDelete(){
-            console.log("clicked")
+            this.$emit('removeTask', this.toDoTask)
         }
     }
 }

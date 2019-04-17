@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <Form @termChange="onTermChange" @addTask="addTask"></Form>
-    <List :toDoTasks="toDoTasks"></List>
+    <List :toDoTasks="toDoTasks" ></List>
   </div>
 </template>
 
@@ -30,7 +30,10 @@ export default {
     
     onTermChange(task) {
       this.userEntry = task
-    }
+    },
+    //  onDelete() {
+    //   console.log(this.toDoTasks)
+    // }
   }
 };
 </script>
